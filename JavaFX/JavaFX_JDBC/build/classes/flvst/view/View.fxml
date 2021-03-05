@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPanel" prefHeight="486.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flvst.view.ViewController">
+   <children>
+      <GridPane fx:id="gridPanel" prefHeight="473.0" prefWidth="544.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="521.0" minWidth="10.0" prefWidth="521.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="23.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox fx:id="verticalBox" alignment="CENTER">
+               <children>
+                  <Label fx:id="labelTitulo" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="511.0" text="Registro " textOverrun="CLIP" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="Vivaldi Italic" size="26.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </Label>
+                  <GridPane prefHeight="133.0" prefWidth="304.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="labelNombre" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="77.0" text="Nombre" GridPane.vgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="labelApellido" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="77.0" text="Apellido" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="labelPromedio" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="82.0" text="Promedio" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="textNombre" GridPane.columnIndex="1" />
+                        <TextField fx:id="textApellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="textPromedio" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="btnRegistrar" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#guardar" text="Guardar" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="btnModificar" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#modificar" text="Modificar" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="btnEliminar" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" right="20.0" />
+                     </padding>
+                  </GridPane>
+                  <TableView fx:id="tablaRegistros" onMouseClicked="#seleccionar" prefHeight="186.0" prefWidth="508.0" />
+                  <Button fx:id="btnGraficar" mnemonicParsing="false" onAction="#pintarGraficas" text="Button">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </VBox>
+            <AnchorPane fx:id="panelGrafica" prefHeight="466.0" prefWidth="245.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
