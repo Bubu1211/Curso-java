@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario Contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <!-- Llines necesaras para agregar librerías JavasCript: JQuery, Modernizr y WebShims-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js-webshim/minified/modernizr.js"></script>
+        <script src="js-webshim/minified/polyfiller.js"></script>
+        <script>$.webshims.polyfill('es5 mediaelement forms');</script> 
+        <script>
+            $(document).ready(function(){
+                $("form").submit(function(){
+                    alert("Formulario válido");
+                    return false;
+                });
+            }); 
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Formulario web</h1>
+            <fieldset>
+                <legend>Detalles de contacto</legend>
+                <form action="#">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" autofocus="" placeholder="Escribe tu nombre..." name="nombre"
+                           required="required" pattern="[a-zA-Z\s]{5,}">
+                    <span class="invalid">*El nombre es requerido</span> <!<!-- mensaje de validez con clase invalid para usar estilos css  -->
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" required="" placeholder="Escribe tu email">
+                    <span class="invalid">*El email es requerido</span>
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="telefono" placeholder="escribe tu telefono"/>
+                    <span class="invalid">*se requiere el telefono</span>
+                    
+                    <label for="pais">Pais: </label>
+                    <input name="pais" list="paises" placeholder="Selecciona tu pais"/>
+                    <datalist id="paises">
+                        <option>México</option>
+                        <option>España</option>
+                        <option>Colombia</option>
+                    </datalist>
+                    <label>Edad: </label>
+                    <input type="number" name="edad" min="18" max="65"/>
+                    
+                    <label for="nacimiento">Fecha de nacimiento: </label>
+                    <input type="date" name="nacimiento" min="1900-01-01" max="3000-12-31"/>
+                    
+                    <div>
+                        <input type="submit" value="Enviar" id="enviar"/> 
+                    </div>
+                </form>
+            </fieldset>
+        </header>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+package javafx_bootstrap;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+
+public class VistaCSSController implements Initializable {
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        
+    }    
+    
+}

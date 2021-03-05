@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Bootstrap_JavaFX.jnlp">
+  <information>
+    <title>Bootstrap_JavaFX</title>
+    <vendor>Bubu</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Bootstrap_JavaFX.jar" size="5388" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\jfoenix-8.0.4.jar" size="2487326" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="bootstrap_javafx.Bootstrap_JavaFX"  name="Bootstrap_JavaFX" />
+  <update check="always"/>
+</jnlp>

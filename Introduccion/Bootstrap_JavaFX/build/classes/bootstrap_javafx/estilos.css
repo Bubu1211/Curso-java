@@ -1,0 +1,22 @@
+.textfield{
+
+    -fx-border-color: blue;
+    -fx-border-insets: 5;
+    -fx-border-width: 3;
+    -fx-border-radius: 20%
+        -fx-font-size: large;
+}
+
+.boton{
+    -fx-background-color: rgb(40, 235, 13);
+    -fx-border-color: blue;
+    -fx-border-insets: 5;
+    -fx-border-width: 3;
+    -fx-border-radius: 20%;
+    -fx-font-size: large;
+}
+
+.pestañas{
+    -fx-font-size: large;
+    -fx-background-color: rgb(13,235,235);
+}

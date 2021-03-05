@@ -1,0 +1,9 @@
+Nota: 1
+contenido de prueba 1
+
+lista de quehaceres
+
+tipos de recorridos en un argol bonario
+pre orden: raiz izquierda derecha
+in orden: izquierda raiz derecha
+pos oriden: izquierda derecha raiz

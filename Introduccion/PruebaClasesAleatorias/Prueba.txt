@@ -1,0 +1,1 @@
+public class Prueba{private int Jul;private int ene;public int getEne(){return this.ene;}}

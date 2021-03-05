@@ -1,0 +1,4 @@
+rutaNotas: archivos
+ColorFondo: 255,255,255,
+ColorBarra: 12,23,255,
+

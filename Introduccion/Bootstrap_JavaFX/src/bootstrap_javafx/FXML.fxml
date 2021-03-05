@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="289.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bootstrap_javafx.FXMLController">
+   <children>
+      <JFXTextField labelFloat="true" layoutX="42.0" layoutY="106.0" prefHeight="25.0" prefWidth="227.0" promptText="Usuario" styleClass="textfield" stylesheets="@estilos.css" />
+      <JFXPasswordField labelFloat="true" layoutX="42.0" layoutY="171.0" prefHeight="25.0" prefWidth="227.0" promptText="Contraseña" styleClass="textfield" stylesheets="@estilos.css" />
+      <ImageView fitHeight="64.0" fitWidth="234.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="botonIngresar" layoutX="130.0" layoutY="223.0" onAction="#ingresar" styleClass="boton" stylesheets="@estilos.css" text="Ingresar" />
+   </children>
+</AnchorPane>
